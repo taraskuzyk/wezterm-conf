@@ -33,6 +33,9 @@ config.keys = {
 		mods = "CTRL|ALT",
 		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
 	},
+	{ key = "k", mods = "ALT", action = act.ScrollByLine(-1) },
+	{ key = "j", mods = "ALT", action = act.ScrollByLine(1) },
+	{ key = "n", mods = "CTRL|ALT", action = act.SpawnTab("DefaultDomain") },
 }
 
 for i = 1, 8 do
