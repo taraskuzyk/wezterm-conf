@@ -48,7 +48,7 @@ config.keys = {
 	{ key = "F", mods = "SHIFT|CTRL", action = act.Search("CurrentSelectionOrEmptyString") },
 	{ key = "N", mods = "SHIFT|CTRL", action = act.SpawnWindow },
 	{ key = "R", mods = "ALT|CTRL", action = act.ReloadConfiguration },
-	{ key = "W", mods = "ALT|CTRL", action = act.CloseCurrentTab({ confirm = true }) },
+	{ key = "w", mods = "ALT|CTRL", action = act.CloseCurrentTab({ confirm = false }) },
 	{ key = "X", mods = "ALT|CTRL", action = act.ActivateCopyMode },
 	{ key = "j", mods = "ALT", action = act.ScrollByLine(1) },
 	{ key = "k", mods = "ALT", action = act.ScrollByLine(-1) },
