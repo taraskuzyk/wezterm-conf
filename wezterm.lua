@@ -55,8 +55,24 @@ config.keys = {
 	{ key = "n", mods = "ALT|CTRL", action = act.SpawnTab("DefaultDomain") },
 	{ key = "PageUp", mods = "ALT", action = act.ScrollByPage(-1) },
 	{ key = "PageDown", mods = "ALT", action = act.ScrollByPage(1) },
-}
 
+	{
+		key = "H",
+		mods = "ALT|CTRL|SHIFT",
+		action = act.AdjustPaneSize({ "Left", 5 }),
+	},
+	{
+		key = "J",
+		mods = "ALT|CTRL|SHIFT",
+		action = act.AdjustPaneSize({ "Down", 5 }),
+	},
+	{ key = "K", mods = "ALT|CTRL|SHIFT", action = act.AdjustPaneSize({ "Up", 5 }) },
+	{
+		key = "L",
+		mods = "ALT|CTRL|SHIFT",
+		action = act.AdjustPaneSize({ "Right", 5 }),
+	},
+}
 for i = 1, 8 do
 	-- CTRL+ALT + number to activate that tab
 	table.insert(config.keys, {
