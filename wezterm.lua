@@ -1,10 +1,12 @@
 local wezterm = require("wezterm")
 local act = wezterm.action
 local config = {}
+
 config.font = wezterm.font({
 	family = "JetBrains Mono",
 	harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
 })
+
 config.keys = {
 	{
 		key = "h",
@@ -69,7 +71,10 @@ config.keys = {
 		mods = "ALT|CTRL|SHIFT",
 		action = act.AdjustPaneSize({ "Right", 5 }),
 	},
+	{ key = "{", mods = "SHIFT|ALT", action = act.MoveTabRelative(-1) },
+	{ key = "}", mods = "SHIFT|ALT", action = act.MoveTabRelative(1) },
 }
+
 for i = 1, 8 do
 	-- CTRL+ALT + number to activate that tab
 	table.insert(config.keys, {
